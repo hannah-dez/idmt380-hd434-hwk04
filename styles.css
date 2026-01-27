@@ -1,0 +1,140 @@
+:root {
+  --text-color: #1a1a1a;
+  --bg-color: #ffffff;
+  --accent-color: #a90101;
+  --dark-bg: #424242;
+  --dark-text: #F7F7F7; 
+  --focus: #1c4f89;
+}
+@font-face {
+    font-family: 'OpenDyslexic';
+    src: url(./assets/OpenDyslexic-Regular.otf);
+}
+@font-face {
+    font-family: 'Verdana';
+    src: url(./assets/Verdana.ttf);
+}
+html{
+    font-size: 100%;
+}
+body{
+    font-family: "Verdana", sans-serif;
+}
+
+.gallery{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+
+}
+
+p{
+    font-size: clamp(1rem, 1.2vw, 1.5rem);
+    line-height: 1.5;
+    max-width: 65ch;
+    text-align: start;
+}
+
+.gallery img{
+    width: 30%;
+    height: auto;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+    font-size: 1rem;
+    line-height: 1.5;
+    border: solid, 5px, var(--bg-color);
+}
+
+ul{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    flex-wrap: wrap;
+     margin: 0, auto;
+    padding: 0;
+    gap: 2.5vw;
+}
+
+li{
+    font-size: clamp(1rem, 2.5vw, 1.5rem);
+    line-height: 1.5;
+}
+
+h2{
+    font-size: clamp(1rem, 1.5vw, 1.5rem);
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+.hero img{
+    width: 100%;
+}
+
+#main{
+    margin-top: 1vw;
+    padding: 1vw;
+}
+
+.skip-link {
+  position: absolute;
+  top: -50px;
+  left: 0;
+  background: var(--accent-color);
+  color: var(--bg-color);
+  padding: 8px;
+  z-index: 100;
+}
+
+:focus-visible {
+  outline: 3px solid #005fcc;
+  outline-offset: 3px;
+}
+
+li a:hover,
+li a:focus-visible {
+    text-decoration: underline;
+}
+
+.dyslexia-mode {
+  letter-spacing: 0.15em;
+  word-spacing: 0.2em;
+  line-height: 2;
+  font-family: "OpenDyslexic", Verdana, sans-serif;
+}
+ #dyslexia-toggle {
+  margin: 1rem;
+  padding: 0.5rem 1rem;
+  background: var(--accent-color);
+  color: var(--bg-color);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+ #dyslexia-toggle:focus {
+  outline: 3px solid #005fcc;
+  outline-offset: 3px;
+}
+body.dyslexia-mode #dyslexia-toggle {
+  font-family: "OpenDyslexic", Verdana, sans-serif;
+}
+
+.skip-link:focus { top: 0; }
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none;
+    transition: none;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background: var(--dark-bg);
+    color: var(--dark-text);
+  }
+}

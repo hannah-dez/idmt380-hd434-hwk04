@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Standard Tap Philadelphia</title>
+  <meta name="description" content="The home of local beer in Philadelphia. 21 drafts and 2 hand pumps complement a changing, locally sourced chalkboard menu." />
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <header>
+    <a href="#main" class="skip-link">
+    Skip to main content
+    </a>
+    <button id="dyslexia-toggle">
+        Enable Dyslexia Mode
+    </button>
+    <div class="site-branding">
+      <h1>
+        <a href="/">
+          <img src="https://images.squarespace-cdn.com/content/v1/5dd43005931aab7d2c9b4cdf/1574188395319-GMSWC31FBBBBGD2QSYED/standardtaplogo.png"
+               alt="Standard Tap Logo" />
+        </a>
+      </h1>
+      <h2>Eat Local | Drink Local</h2>
+    </div>
+
+    <nav>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/aboutus">About Us</a></li>
+        <li><a href="/insidethetap">Inside The Tap</a></li>
+        <li><a href="/jobs">Jobs</a></li>
+      </ul>
+    </nav>
+
+    <nav class="social-links">
+      <a href="https://instagram.com/standardtap" target="_blank">Instagram</a>
+      <a href="https://www.facebook.com/StandardTap/" target="_blank">Facebook</a>
+    </nav>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <section class="hero">
+      <img src="https://images.squarespace-cdn.com/content/v1/5dd43005931aab7d2c9b4cdf/1592505151560-CEYVJVN3I89QY1W0RVCQ/homepage%2Bbackground.jpg"
+           alt="Standard Tap interior" />
+    </section>
+
+    <section class="gallery">
+      <img src="https://images.squarespace-cdn.com/content/v1/5dd43005931aab7d2c9b4cdf/1682466593120-5XAHETOP9T0EJ8B3QXQ9/DSC09993.jpg" alt="Food" />
+      <img src="https://images.squarespace-cdn.com/content/v1/5dd43005931aab7d2c9b4cdf/1681236670642-6CSM02E4DPV5VDE2HC1P/DSC04756.jpg" alt="Drinks" />
+      <img src="https://images.squarespace-cdn.com/content/v1/5dd43005931aab7d2c9b4cdf/1683046927496-STR69ORZ93CP3G6DN9E6/public.jpeg" alt="Interior" />
+      <img src="https://images.squarespace-cdn.com/content/v1/5dd43005931aab7d2c9b4cdf/1739847118194-CU3IDQPMOUGMMX12Z4S9/HH.jpg" alt="Happy Hour" />
+    </section>
+
+    <section class="location">
+      <p>901 N 2nd St | Northern Liberties | Philadelphia, PA</p>
+    </section>
+    <nav class="primary-actions">
+      <ul>
+        <li><a href="/food">Eat</a></li>
+        <li><a href="/drink">Drink</a></li>
+        <li><a href="/visit">Visit</a></li>
+        <li><a href="/happy-hour">Happy Hour</a></li>
+      </ul>
+    </nav>
+  </main>
+   <script>
+    const toggleButton = document.getElementById("dyslexia-toggle");
+
+    // Load saved preference
+    if (localStorage.getItem("dyslexia") === "on") {
+      document.body.classList.add("dyslexia-mode");
+      toggleButton.textContent = "Disable Dyslexia Mode";
+      toggleButton.setAttribute("aria-pressed", "true");
+    }
+
+    toggleButton.addEventListener("click", () => {
+      const enabled = document.body.classList.toggle("dyslexia-mode");
+      toggleButton.textContent = enabled ? "Disable Dyslexia Mode" : "Enable Dyslexia Mode";
+      toggleButton.setAttribute("aria-pressed", enabled);
+      localStorage.setItem("dyslexia", enabled ? "on" : "off");
+    });
+  </script>
+</body>
+</html>
