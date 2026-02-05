@@ -316,7 +316,7 @@ body.dyslexia-mode #dyslexia-toggle {
 .skip-link:focus { top: 0; }
 
 .main-box {
-  background-color: var(--readable-box-color); /* semi-transparent white for readability */
+  background-color: var(--bg-color); /* semi-transparent white for readability */
   padding: 3rem 2rem;  /* space around text and links */
   border-radius: 15px; /* rounded corners */
   box-shadow: 0 8px 20px var(--box-shadow); /* subtle shadow to float above bg */
@@ -325,7 +325,7 @@ body.dyslexia-mode #dyslexia-toggle {
   align-items: center;
   gap: 2rem;
   max-width: fit-content; /* optional: constrain width */
-  width: 90%;
+  width: 75%;
   margin: 0 auto; /* center horizontally */
 }
 

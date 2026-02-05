@@ -15,7 +15,7 @@
     <div class="site-branding">
       <a href="/">
         <img src="https://images.squarespace-cdn.com/content/v1/5dd43005931aab7d2c9b4cdf/1574188395319-GMSWC31FBBBBGD2QSYED/standardtaplogo.png"
-            alt="Standard Tap Logo" />
+            alt="Red Circle with Yellow 'Standard Tap' Words, Links to Home Page" />
       </a>
       <h1>Eat Local | Drink Local</h1>
     </div>
@@ -27,27 +27,27 @@
       <span></span>
     </button>
 
-    <nav class="header-menu closed" aria-label="Main Menu">
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About Us</a></li>
-        <li><a href="#">Inside The Tap</a></li>
-        <li><a href="#">Jobs</a></li>
-        <li class="social">
-          <a href="https://instagram.com/standardtap" target="_blank" rel="noopener noreferrer" aria-label="Standard Tap on Instagram (opens in a new tab)">
-            <img src="assets/insta-logo.svg" data-light="assets/insta-logo.svg" data-dark="assets/insta-dark-logo.svg" alt="Instagram"/>
+    <nav class="header-menu closed" aria-label="Primary Menu">
+      <ul aria-label="Navigation">
+        <li aria-label="Home"><a href="#">Home</a></li>
+        <li aria-label="About Us"><a href="#">About Us</a></li>
+        <li aria-label="Inside The Tap"><a href="#">Inside The Tap</a></li>
+        <li aria-label="Jobs"><a href="#">Jobs</a></li>
+        <li class="social" aria-label="Standard Tap on Instagram (opens in a new tab)">
+          <a href="" rel="noopener noreferrer">
+            <img src="assets/insta-logo.svg" data-light="assets/insta-logo.svg" data-dark="assets/insta-dark-logo.svg" alt="Instagram Logo"/>
           </a>
         </li>
-        <li class="social">
-          <a href="https://www.facebook.com/StandardTap/" target="_blank" rel="noopener noreferrer" aria-label="Standard Tap on Facebook (opens in a new tab)">
-            <img src="assets/fb-logo.svg" data-light="assets/fb-logo.svg" data-dark="assets/fb-dark-logo.svg" alt="Facebook"/>
+        <li class="social" aria-label="Standard Tap on Facebook (opens in a new tab)">
+          <a href="" rel="noopener noreferrer">
+            <img src="assets/fb-logo.svg" data-light="assets/fb-logo.svg" data-dark="assets/fb-dark-logo.svg" alt="Facebook Logo"/>
           </a>
         </li>
-      </ul>
+      </ul><!--ADD IN TARGET="BLANK"-->
 
-      <div class="dyslexia-toggle">
+      <div class="dyslexia-toggle" aria-label="accessibility options">
         <span id="dyslexia-label">Dyslexia Mode</span>
-        <button id="dyslexia-toggle" class="switch" role="switch" aria-checked="false" aria-labelledby="dyslexia-label">
+        <button id="dyslexia-toggle" class="switch" role="switch" aria-checked="false" aria-label="Toggle Dyslexia Mode">
           <span class="switch-handle"></span>
         </button>
       </div>
@@ -56,15 +56,15 @@
 
 
   <main id="main" tabindex="-1">
-    <article class="main-box">
-      <address>901 N 2nd St | Northern Liberties | Philadelphia, PA</address>
+    <article class="main-box" aria-label="Location, Menu, and Visit Navigation">
+      <address aria-label="Address">901 N 2nd St | Northern Liberties | Philadelphia, PA</address>
 
-      <nav class="primary-actions" aria-label="Activity Links">
-        <ul>
-          <li><a href="#" data-bg="food" class="action-link">Eat</a></li>
-          <li><a href="#" data-bg="drink" class="action-link">Drink</a></li>
-          <li><a href="#" data-bg="visit" class="action-link">Visit</a></li>
-          <li><a href="#" data-bg="happy" class="action-link">Happy Hour</a></li>
+      <nav class="primary-actions" aria-label="Menu and Visit Navigation">
+        <ul aria-label="Menu and Visit Navigation">
+          <li aria-label="Eat"><a href="#" data-bg="food" class="action-link">Eat</a></li>
+          <li aria-label="Drink"><a href="#" data-bg="drink" class="action-link">Drink</a></li>
+          <li aria-label="Visit"><a href="#" data-bg="visit" class="action-link">Visit</a></li>
+          <li aria-label="Happy Hour"><a href="#" data-bg="happy" class="action-link">Happy Hour</a></li>
         </ul>
       </nav>
     </article>
