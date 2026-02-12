@@ -9,19 +9,17 @@
 </head>
 
 <body>
-  <header>
+  <header aria-label="Header">
     <a href="#main" class="skip-link">Skip to main content</a>
 
-    <div class="site-branding">
-      <a href="/">
+    <div class="site-branding" role="Content">
         <img src="https://images.squarespace-cdn.com/content/v1/5dd43005931aab7d2c9b4cdf/1574188395319-GMSWC31FBBBBGD2QSYED/standardtaplogo.png"
-            alt="Red Circle with Yellow 'Standard Tap' Words, Links to Home Page" />
-      </a>
+            alt="Red Circle with Yellow 'Standard Tap' Words" />
       <h1>Eat Local | Drink Local</h1>
     </div>
     
   
-    <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
+    <button class="hamburger" aria-label="Hamburger Menu" aria-expanded="false">
       <span></span>
       <span></span>
       <span></span>
@@ -45,9 +43,9 @@
         </li>
       </ul><!--ADD IN TARGET="BLANK"-->
 
-      <div class="dyslexia-toggle" aria-label="accessibility options">
-        <span id="dyslexia-label">Dyslexia Mode</span>
-        <button id="dyslexia-toggle" class="switch" role="switch" aria-checked="false" aria-label="Toggle Dyslexia Mode">
+      <div class="dyslexia-toggle" aria-label="accessibility options" role="Toggle">
+        <span id="dyslexia-label" role="Label">Dyslexia Mode</span>
+        <button id="dyslexia-toggle" class="switch" role="Switch" aria-checked="false" aria-label="Toggle Dyslexia Mode">
           <span class="switch-handle"></span>
         </button>
       </div>
@@ -56,7 +54,7 @@
 
 
   <main id="main" tabindex="-1">
-    <article class="main-box" aria-label="Location, Menu, and Visit Navigation">
+    <article class="main-box" aria-label="Location, Menu, and Visit Navigation" role="Content">
       <address aria-label="Address">901 N 2nd St | Northern Liberties | Philadelphia, PA</address>
 
       <nav class="primary-actions" aria-label="Menu and Visit Navigation">
