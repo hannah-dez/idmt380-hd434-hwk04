@@ -3,9 +3,13 @@
   --bg-color: #ffffff;
   --bg-color-fade:rgba(255, 255, 255, 0.386);
   --accent-color: #630606;
+  --error-red: #cc0000;
+  --error-red-light: #ffcccc;
+  --yellow-light: #fff0c8;
   --accent-two: #bc8d00;
   --accent-color-fade: rgba(0, 0, 0, 0.60);
   --dark-bg: #2c2c2c;
+  --dark-bg-two: #4b4b4b;
   --dark-text: #F7F7F7; 
   --focus: #1159ab;
   --focus-dark: #51a2ff;
@@ -37,7 +41,7 @@ body {
 
   font-family: "Verdana", sans-serif;
 }
-body.index{
+body{
   background-image: url("https://images.squarespace-cdn.com/content/v1/5dd43005931aab7d2c9b4cdf/1592505151560-CEYVJVN3I89QY1W0RVCQ/homepage%2Bbackground.jpg");
   background-size: cover;
   background-position: center;
@@ -72,17 +76,6 @@ main{
   display: flex;
   flex-direction: column;
   align-items: end;
-}
-
-.second-header{
-
-  background-image: 
-    linear-gradient(var(--bg-color-fade), var(--bg-color-fade)),
-    url("https://images.squarespace-cdn.com/content/v1/5dd43005931aab7d2c9b4cdf/1592505151560-CEYVJVN3I89QY1W0RVCQ/homepage%2Bbackground.jpg");
-  background-size: cover;
-  background-position: top;
-  background-repeat: no-repeat;
-  padding-bottom:15px;
 }
 
 
@@ -395,16 +388,7 @@ body.jobs main {
   width: 100%;
 }
 
-body.jobs header {
-  padding: 0;
-  margin: 0;
-}
 
-body.jobs .second-header {
-  width: 100%;
-  padding: 3vw;
-  box-sizing: border-box;
-}
 .sr-only {
   position: absolute;
   width: 1px;
@@ -447,6 +431,7 @@ body.jobs .second-header {
       color: var(--text-color);
       flex: 1;
       align-items:flex-start;
+      letter-spacing: 0.08em;
     }
 fieldset label {
   flex: 1;
@@ -516,7 +501,26 @@ form > label {
 label{
   align-self:flex-start;
 }
+/*Feed back on the form*/
+input.error,
+textarea.error {
+  border-color: #ffcccc;
+  background-color: #fff5f5;
+}
 
+.error-message {
+  display: none;
+  color: var(--error-red);
+  font-size: 0.8rem;
+  font-weight: normal;
+  margin-top: 0.25rem;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.error-message.visible {
+  display: flex;
+}
 /*Confirmation*/
 #confirmation {
       display: none;
@@ -596,11 +600,6 @@ label{
  .hamburger span{
     background-color: var(--bg-color);
   }
-  .second-header{
-    background-image: 
-      linear-gradient(var(--box-shadow), var(--box-shadow)),
-      url("https://images.squarespace-cdn.com/content/v1/5dd43005931aab7d2c9b4cdf/1592505151560-CEYVJVN3I89QY1W0RVCQ/homepage%2Bbackground.jpg");
-  }
   /*Form Page*/
   body.jobs{
     background-color:var(--dark-bg);
@@ -613,12 +612,21 @@ label{
     color: var(--dark-text);
   }
   input, textarea{
-    background-color: var(--dark-bg);
+    background-color: var(--dark-bg-two);
     color: var(--dark-text);
   }
   /* Placeholder text */
   ::placeholder {
-    color: var(--dark-text);
+    color: var(--yellow-light);
+  }
+  /*Error Message*/
+  input.error, textarea.error{
+    border-color: var(--error-red);
+    background-color: #4b4b4b;
+    color: var(--error-red-light);
+  }
+  .error-message {
+    color: var(--error-red-light);
   }
 
   /* Confirmation section */
