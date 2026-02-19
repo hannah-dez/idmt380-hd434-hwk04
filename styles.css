@@ -448,7 +448,14 @@ body.jobs .second-header {
       flex: 1;
       align-items:flex-start;
     }
+fieldset label {
+  flex: 1;
+}
 
+form > label {
+  flex: none;
+  width: 100%;
+}
     input[type="text"],
     input[type="email"],
     input[type="file"],
@@ -472,11 +479,6 @@ body.jobs .second-header {
       cursor: pointer;
     }
 
-    form > label {
-      display: flex;
-      flex-direction: column;
-      gap: 0.3rem;
-    }
     #contactForm.hidden {
       display: none;
     }
